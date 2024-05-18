@@ -9,6 +9,7 @@ function App() {
         setEmail(event.target.value);
     }
 
+
     let message;
     if (email.length < 10) {
         message = <div>Ale masz krótki adres!</div>;
@@ -23,8 +24,8 @@ function App() {
             <h1>System do zapisów na zajęcia</h1>
             <h2>Twój e-mail to {email}</h2>
             {message}
-
-            <input type="text" value={email} onChange={handleChange}/>
+            <input type="text" value={email} onChange={handleChange} />
+            <button onClick={() => alert(email)}>Wyświetl mój adres w alercie</button>
         </div>
     );
 
